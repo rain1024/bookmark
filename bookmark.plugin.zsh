@@ -37,6 +37,7 @@ function bookmark_to {
 function bookmark_delete {
 	if [[ $# -gt 0 ]]; then
 		apparix -purge-mark $1
+		bookmark_list
 	else
 		bookmark_help
 	fi	
