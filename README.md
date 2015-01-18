@@ -15,8 +15,10 @@ Bookmark Plugin for Zsh
 
 * apparix
 
-```
+```sh
 sudo apt-get install apparix
+# check
+$ apparix 
 ```
 
 ### Install
@@ -40,6 +42,7 @@ plugins=(bookmark)
 
 ```
 bl	list bookmarks
-bm	add a bookmark 
+ba	add a bookmark 
 bt	cd to a bookmark
+bd  delete a bookmark 
 ```

@@ -28,7 +28,15 @@ function bookmark_to {
 	if [[ $# -gt 0 ]]; then
 		folder=$(apparix $1)
 		cd $folder
-		ls $folder
+	else
+		bookmark_help
+	fi	
+}
+
+# delete bookmark
+function bookmark_delete {
+	if [[ $# -gt 0 ]]; then
+		apparix -purge-mark $1
 	else
 		bookmark_help
 	fi	
@@ -41,7 +49,9 @@ _bookmark_complete() {
 }
 
 compdef _bookmark_complete bookmark_to
+compdef _bookmark_complete bookmark_delete
 
 alias bt=bookmark_to
 alias bl=bookmark_list
 alias ba=bookmark_add
+alias bd=bookmark_delete
